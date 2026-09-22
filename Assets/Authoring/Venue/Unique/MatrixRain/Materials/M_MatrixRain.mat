@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_MatrixRain
+  m_Shader: {fileID: 4800000, guid: ee5841348cf6f8d4b81d2c031dd59cf8, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FontAtlas:
+        m_Texture: {fileID: 2800000, guid: 6b7c2207963b058448ea525523efbaec, type: 3}
+        m_Scale: {x: 25, y: 25}
+        m_Offset: {x: 0, y: 0}
+    - _GoldMilestoneTex:
+        m_Texture: {fileID: 8600000, guid: f0d3270c63a62124088dc7338fdce88f, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpectrumHoldTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Yarg_GameStateTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Yarg_SoundTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AspectRatio: 1.75
+    - _AudioBurstChance: 0
+    - _AudioBurstRate: 1
+    - _AudioBurstThreshold: 0
+    - _AudioCeiling: 0.6
+    - _AudioFloor: 0.01
+    - _AudioGapRelief: 1
+    - _AudioGlowBoost: 1.5
+    - _AudioHeadBoost: 0.5
+    - _AudioMutationBoost: 0.15
+    - _AudioReactivity: 0.35
+    - _AudioTrailSwell: 1
+    - _BarrelDistortion: 0.1
+    - _BaseColumns: 75
+    - _BeatPulseIntensity: 0
+    - _BeatPulseWindow: 0.5
+    - _BlackLevelLift: 0.02
+    - _CRTChromaticAberration: 0.01
+    - _CRTConvergenceFringing: 0.005
+    - _CRTPhosphorBleed: 0.5
+    - _CRTScanlineIntensity: 0.5
+    - _CRTSlotMaskIntensity: 0.3
+    - _CRTVignetteIntensity: 0.95
+    - _CellGapX: -0.15
+    - _CellGapY: -0.15
+    - _ChargePulseIntensity: 0.6
+    - _ChargePulseSpeed: 2.5
+    - _ColumnGapChance: 0.1
+    - _Density: 1
+    - _EditorPreviewFailMeter: 1
+    - _FailBarrelDistortion: 0.05
+    - _FailGlitchCurve: 3
+    - _FailGlitchThreshold: 0.33
+    - _FailMutationBoost: 3
+    - _FailPaletteThreshold: 0.33
+    - _FailRotationBoost: 0.8
+    - _GlitchAudioBoost: 5
+    - _GlitchFailBoost: 10
+    - _GlitchFlashAmount: 2.55
+    - _GlitchTearAmount: 0.16
+    - _GlitchTearRate: 8
+    - _GlitchTearThreshold: 0.1
+    - _GlitchWaveAmount: 0.025
+    - _GlitchWaveFrequency: 7.5
+    - _GlitchWaveGate: 0.999
+    - _GlitchWaveSpeed: 6
+    - _GlowIntensity: 1.1
+    - _GlowRadius: 0.0012
+    - _GlowThreshold: 0.3
+    - _GlyphChangeSpeed: 4
+    - _GlyphScale: 1
+    - _GoldShimmerIntensity: 0.5
+    - _GoldShimmerSpeed: 1.5
+    - _LengthBias: 0.8
+    - _MeasureBurstWindow: 0.08
+    - _MutationRate: 0.01
+    - _ProgressSpectrumGrowth: 0
+    - _ProgressTrailGrowth: 0
+    - _RMSCeiling: 0.5
+    - _RMSFloor: 0.02
+    - _RainSpeed: 0.5
+    - _RotationChance: 0.1
+    - _SpectrumInfluence: 0.8
+    - _TrailLength: 0.4
+    - _UseEditorPreviewFailMeter: 0
+    m_Colors:
+    - _AtlasGridSize: {r: 16, g: 16, b: 0, a: 0}
+    - _BackgroundColor: {r: 0, g: 0.039215688, b: 0.007843138, a: 1}
+    - _FailAlarmColor: {r: 1, g: 0.21999997, b: 0.049999982, a: 1}
+    - _GlitchFlashColor: {r: 0.8, g: 1, b: 0.95, a: 1}
+    - _GoldColor: {r: 1.2, g: 0.92, b: 0.24999997, a: 1}
+    - _GridDimensions: {r: 50, g: 25, b: 0, a: 0}
+    - _HeadColor: {r: 0.57254905, g: 1, b: 0.89019614, a: 1}
+    - _OverdriveColor: {r: 0.89411765, g: 1, b: 1, a: 1}
+    - _TrailColor: {r: 0.28235295, g: 0.8980393, b: 0.5294118, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
