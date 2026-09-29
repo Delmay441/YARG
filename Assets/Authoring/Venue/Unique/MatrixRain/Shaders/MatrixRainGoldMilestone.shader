@@ -29,12 +29,11 @@ Shader "Hidden/MatrixRain/GoldMilestone"
 {
     Properties
     {
-        // Auto-populated at runtime by YARG's TextureManager.ProcessMaterial()
-        // -- this Material must sit on a real Renderer somewhere under the
-        // venue's Stage hierarchy to be found by that scan (see
-        // _MatrixRainSpectrumHoldProxy for the established pattern; this
-        // shares that same proxy object rather than needing a second one).
-        _Yarg_GameStateTex ("YARG Game State Texture (set automatically by the game)", 2D) = "black" {}
+        // NOTE: _Yarg_GameStateTex is deliberately NOT a material property.
+        // It is a GLOBAL texture published by YARG's TextureManager (which
+        // never assigns it per-material); a Properties entry of the same name
+        // would shadow it with the material's own black default. It is
+        // declared in the CGPROGRAM body below instead.
 
         // How fast the envelope closes the gap toward its target once the
         // 6-star threshold is crossed (or un-crossed). Higher = more sudden.

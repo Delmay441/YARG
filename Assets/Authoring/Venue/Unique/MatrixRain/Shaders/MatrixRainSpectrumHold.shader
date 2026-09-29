@@ -39,12 +39,14 @@ Shader "Hidden/MatrixRain/SpectrumHold"
 {
     Properties
     {
-        // Auto-populated at runtime by YARG's TextureManager.ProcessMaterial()
-        // -- see the discovery-proxy renderer comment in the venue scene for
-        // why this Material needs to sit on a real Renderer to be found by
-        // that scan. Row 0 (v=0) is FFT magnitude, 512 texels wide, linear
+        // NOTE: _Yarg_SoundTex is deliberately NOT a material property here.
+        // A Custom Render Texture updates using its OWN shared material, but
+        // YARG's TextureManager.ProcessMaterial() assigns textures to the
+        // per-renderer material INSTANCES (renderer.materials), never to the
+        // shared one the CRT holds. TextureManager also publishes the same
+        // texture as a GLOBAL (Shader.SetGlobalTexture), so it is read from
+        // there instead. Row 0 (v=0) is FFT magnitude, 512 texels wide, linear
         // frequency bins from DC up to roughly a quarter of Nyquist.
-        _Yarg_SoundTex ("YARG Sound Texture (set automatically by the game)", 2D) = "black" {}
 
         // How much of the low end of _Yarg_SoundTex's 512-wide FFT row gets
         // spread across this buffer's lanes. 0.6 covers bass through mid,
@@ -100,7 +102,8 @@ Shader "Hidden/MatrixRain/SpectrumHold"
             float     _ExtrudeRate;
             float     _ReleaseRate;
             float     _BaselineDrizzle;
-            sampler2D _SelfTexture2D; // previous update's own output (double-buffered)
+            // _SelfTexture2D (previous update's own output, double-buffered) is already
+            // declared by UnityCustomRenderTexture.cginc; redeclaring it fails on Vulkan.
 
             float4 frag(v2f_customrendertexture IN) : COLOR
             {
